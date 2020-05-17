@@ -3,6 +3,7 @@
 	<head>
 		<title>Home Page</title>
 		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<header id="header" class="header">
@@ -13,27 +14,33 @@
 							<li>
 								<a href="index.html" style="color:white">HOME</a>
 							</li>
+						</ul>
+
+					</nav>
+
+					<div class="right">
+						<ul>
 							<li>
 								<a class="menyja" id="newin" href="">New In 
 									<img src="images/greydropicon.png" style="width:10px;height:10px;">
 								</a>
 								<ul>
 									<li>
-										<a href="categories/swimwear.html">Swimwear</a>
+										<a href ="categories/Swimwear.html">Swimwear</a>
 									</li>
 									<li>
-										<a href="categories/dresses.html">Dresses</a>
+										<a href ="categories/dresses.html">Dresses</a>
 									</li>
 									<li>
-										<a href="categories/Accessories.html">Accessories</a>
+										<a href ="categories/Accessories.html">Accessories</a>
 									</li>
 									<li>
-										<a href="categories/tops.html">Tops</a>
+										<a href ="categories/tops.html">Tops</a>
 									</li>
 									<li>
-										<a href="categories/gymwear.html">Gymwear</a>
+										<a href ="categories/gymwear.html">Gymwear</a>
 									</li>
-									<li style="height:30px;">
+									<li style="height: 30px;">
 										<a href="categories/sale.html">SALE</a>
 									</li>
 								</ul>
@@ -42,14 +49,23 @@
 								<a href="">About Us</a>
 							</li>
 							<li>
-								<a href="">Login</a>
+								<a class="open-button" onclick="openForm()" href="#">Login</a>
 							</li>
 							<li>
 								<a href="">Contact Us</a>
 							</li>
 						</ul>
+
+						
+					</div>
+				</header>
+						
+										
+								
+							
+						</ul>
 					</nav>
-					<div class="social-icons">
+					<!--<div class="social-icons">
 						<a href="https://www.facebook.com/Fashionnova/">
 							<img src="images/grayfb.png" alt="Facebook Icon">
 						</a>
@@ -63,9 +79,28 @@
 							<img src="images/graytweet.png" alt="Twitter Icon">
 						</a>
 					</div>
+				-->
 				</div>
 			</div>
 		</header>
+
+		<div class="form-popup" id="myForm">
+	<form action="" class="form-container">
+		<p style="font-size: 30;text-align: center; margin: 0; padding: 0;">Login</p>
+		<div style="padding-top: 20px ;">
+		<label for="email">Email </label>
+		<input type="text" placeholder="Enter Email" name="email" required>
+	
+		<label for="psw">Password</label>
+		<input type="text" placeholder="Enter Password" name="psw" required>
+	</div>
+		<button type="submit" class="btn">Login</button>
+		<div class="close-container" onclick="closeForm();">
+		<div class="leftright"></div>
+		<div class="rightleft"></div>
+		</div>
+	</form>
+	</div>
 		<div class="logo">
 			<img src="images/fashion-nova-logo-png-1.png"/>
 		</div>
@@ -85,7 +120,7 @@
 			</div>
 
 			<div id="secondphoto" class="photo">
-				<hr>
+				
 					<a href="">
 						<h3>2020 Hot dresses ! ! !</h3>
 					</a>
@@ -100,7 +135,6 @@
 			</div>
 
 			<div id="photo3" class="photo">
-				<hr>
 					<a href="">
 						<h3>Big SALE Stay Home </h3>
 					</a>
@@ -114,7 +148,7 @@
 			</div>
 
 			<div id="photo4" class="photo">
-				<hr>
+			
 					<a href="">
 						<h3>Accessories</h3>
 					</a>
@@ -151,10 +185,39 @@
 				</li>
 			</ul>
 		</div>
+
+		<script>
+			function openForm() {
+				document.getElementById("myForm").style.display = "block";
+			}
+			function closeForm(){
+				document.getElementById("myForm").style.display ="none";
+			}
+		</script>
+
 	</body>
 	
+				
+
 	<abbr title="Jetmire Syla, Yllka Maloku, Ada Rudi">
 		<div id="footer" class="footer">© Copyright belongs to our group
+			<div id="footer" class="footer">
+				<div class="social-icons">
+						<a href="https://www.facebook.com/Fashionnova/">
+							<img src="images/grayfb.png" alt="Facebook Icon">
+						</a>
+						<a href="https://www.instagram.com/fashionnova/?hl=en">
+							<img src="images/grayinsta.png" alt="Instagram Icon">	
+						</a>
+						<a href="https://www.youtube.com/channel/UC1sJANctVHdPDnC_umEqArg">
+							<img src="images/grayyt.png" alt="Youtube Icon">
+						</a>
+						<a href="https://www.fashionnova.com">
+							<img src="images/graytweet.png" alt="Twitter Icon">
+						</a>
+					</div>
+			
+			</div>
 			<a href="#Top">
 				<img src="images/Back.png" style="margin-right:15px; width:25px; height:25px" alt="Back to top" align="right"/></a>
 	</div> 
